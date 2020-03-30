@@ -18,7 +18,7 @@ url=${ARGV[-1]}
 unset ARGV[${#ARGV[@]}-1]
 GPG_OPTIONS=${ARGV[@]}
 if [ -z "$GPG_OPTIONS" ]; then
-    GPG_OPTIONS="--batch"
+    GPG_OPTIONS="-a --batch"
 fi
 
 host=$(echo "$url" | cut -s -f 1 -d':')
